@@ -68,7 +68,7 @@ public class Employee {
 	public void setWarnings(int warnings) {
 		this.warnings = warnings;
 	}
-	
+
 	/**
 	 * A method that returns the level of seniority of an employee. (Levels 0 to 3)
 	 * 1. The level of seniority is determined by years of service:

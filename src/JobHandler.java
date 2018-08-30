@@ -20,29 +20,28 @@ public class JobHandler {
 	 * @param person 
 	 * @return (currentRank - warningDeRank)
 	 */
-	public static int rank(int warningTotals, int yearlySalary) {
+	public static int rank(int warningTotals, double yearlySalary) {
 		int currentRank = 0;
-		int warningDeRank = 0;
-		if (yearSalary < 10000);
+		if (yearlySalary < 10000);
 			currentRank = 20;
-		if (yearSalary < 50000);
+		if (yearlySalary < 50000);
 			currentRank = 40;
-		if (yearSalary < 100000);
+		if (yearlySalary < 100000);
 			currentRank = 60;
-		if (yearSalary >= 100000);
+		if (yearlySalary >= 100000);
 			currentRank = 80;
-		if (warningTotals > 3);
-			warningDeRank = warningTotals*6;
+		switch(warningTotals) {
+		case 1 :
+			currentRank = currentRank - 5;
+		case 2 :
+			currentRank = currentRank - 10;
+		case 3 :
+			currentRank = currentRank - 15;
+		}if (warningTotals > 3);
+			int warningDeRank = warningTotals*6;
 			return currentRank - warningDeRank;
 		
-		switch(warningTotals){
-		case 1:
-			return currentRank - 5; 
-		case 2:
-			return currentRank - 10;
-		case 3:
-			return currentRank - 15;
-		}//Add Code Here [You have to use Switch and If/Else to get graded] 
+		//Add Code Here [You have to use Switch and If/Else to get graded] 
 	}
 	
 	/**
@@ -71,3 +70,4 @@ public class JobHandler {
 		return qualify; 
 	}
 }
+
